@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Header from '../header/Header';
+import Header from '../../common/header/Header.js';
 import './Home.css';
 
 
