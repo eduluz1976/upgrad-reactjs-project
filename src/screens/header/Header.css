@@ -1,0 +1,13 @@
+.header-home {
+    background-color: black;
+    color: #fff;
+    height: 2em;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+.header-logo {
+    max-height: 2em;
+    background-color: red;
+    
+}
