@@ -1,11 +1,11 @@
 import React from 'react';
 import './AuthStatusBar.css';
 
-export default function AuthStatusBar () {
+export default function AuthStatusBar (props) {
     return (
         <div className="auth-status-bar">
 
-            <button name="Login">Login</button>
+            <button name="Login" onClick={props.clickLoginButtonHandler}>Login</button>
             <button name="Logout">Logout</button>
 
          
