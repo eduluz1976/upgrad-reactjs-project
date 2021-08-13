@@ -5,7 +5,8 @@ export default function AuthStatusBar () {
     return (
         <div className="auth-status-bar">
 
-            <button>Login</button>
+            <button name="Login">Login</button>
+            <button name="Logout">Logout</button>
 
          
 
