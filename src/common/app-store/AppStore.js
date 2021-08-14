@@ -39,6 +39,41 @@ const initialState = {
             releasedDate: '2020-01-06',
             img: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
         }
+    ],
+    upcomingMovies: [
+        {
+            id: 1,
+            title: 'Movie 1',
+            img: 'https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg'
+        },
+        {
+            id: 2,
+            title: 'Movie 2',
+            img: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
+        },
+        {
+            id: 3,
+            title: 'Movie 3',
+            img: 'https://upload.wikimedia.org/wikipedia/en/0/08/Annabelle_Creation.jpg'
+        },
+        {
+            id: 4,
+            title: 'Movie 4',
+            releasedDate: '2020-01-04',
+            img: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
+        },
+        {
+            id: 5,
+            title: 'Movie 5',
+            releasedDate: '2020-01-05',
+            img: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
+        },
+        {
+            id: 6,
+            title: 'Movie 6',
+            releasedDate: '2020-01-06',
+            img: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
+        }
     ]
 };
 
