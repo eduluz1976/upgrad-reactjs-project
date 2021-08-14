@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import MyImageSvg from '../../assets/logo.svg';
 import AuthStatusBar from '../auth-status-bar/AuthStatusBar';
-import AuthFormDialog from '../../screens/auth-form/AuthFormDialog';
+import AuthFormDialog from '../../common/auth-form/AuthFormDialog';
 
 export default function Header() {
 
