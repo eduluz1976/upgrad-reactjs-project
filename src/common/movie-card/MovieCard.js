@@ -12,9 +12,19 @@ export default function MovieCard(props) {
         return "";
     }
 
+    function getCustomStyle() {
+        let response = {};
+        if (props.cellHeight) {
+            response.height = props.cellHeight;
+        }
+        return response;
+    }
+
 
     return (
-        <GridListTile  className="movie-card-container">
+        <GridListTile  className="movie-card-container"
+        style={getCustomStyle()}
+        >
         <img src={props.imgSrc} alt={props.title} />
         <GridListTileBar
             title={props.title}
