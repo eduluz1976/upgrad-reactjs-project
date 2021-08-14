@@ -38,7 +38,7 @@ export default function UpcomingMovies() {
                 Upoming Movies
             </div>
 
-            <div class="upcoming-movies-container">
+            <div className="upcoming-movies-container">
 
 
             <GridList
@@ -57,7 +57,7 @@ export default function UpcomingMovies() {
             {list.map((item) => {
 
                 return (
-                    <GridListTile className="upcoming-movies-item">
+                    <GridListTile className="upcoming-movies-item" key={item.n}>
                     <img src={'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'} alt={'test'} />
                     <GridListTileBar
                         title={"Movie "+item.n}
