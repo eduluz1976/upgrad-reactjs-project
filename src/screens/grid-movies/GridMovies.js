@@ -10,40 +10,6 @@ export default function GridMovies() {
 
     const list = useSelector(state => state.releasedMovies);
 
-    // const list = [
-    //     {
-    //         n:1,
-    //         releasedDate:'abc'
-    //     },
-    //     {
-    //         n:2,
-    //         releasedDate:'xyz'
-    //     },
-    //     {
-    //         n:3,
-    //         releasedDate:'abc'
-    //     },
-    //     {
-    //         n:4,
-    //         releasedDate:'abc'
-    //     },
-    //     {
-    //         n:5,
-    //         releasedDate:'abc'
-    //     },
-    //     {
-    //         n:6,
-    //         releasedDate:'abc'
-    //     },
-    //     {
-    //         n:7,
-    //         releasedDate:'abc'
-    //     },
-    //     {
-    //         n:8,
-    //         releasedDate:'abc'
-    //     }
-    // ]; 
     return (
         
         <GridList
