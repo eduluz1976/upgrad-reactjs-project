@@ -10,7 +10,7 @@ export default function FilterMoviesFormGenres () {
         <FormControl style={{width:'100%'}}>                
         <InputLabel>Movie Genres
         </InputLabel>
-        <Select>
+        <Select value={0}>
             <MenuItem>
                 <Checkbox></Checkbox> 1
             </MenuItem>

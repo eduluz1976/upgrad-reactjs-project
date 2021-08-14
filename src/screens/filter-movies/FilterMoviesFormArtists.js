@@ -10,7 +10,7 @@ export default function FilterMoviesFormArtists () {
         <FormControl style={{width:'100%'}}>                
         <InputLabel>Artists
         </InputLabel>
-        <Select>
+        <Select value={0}>
             <MenuItem>
                 <Checkbox></Checkbox> 1
             </MenuItem>

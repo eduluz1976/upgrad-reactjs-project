@@ -79,7 +79,7 @@ export default function FilterMovies() {
                <br/>
 
                 <Button
-                contained
+                contained="true"
                 style={{backgroundColor:'#0f0ff0', width:'100%',color:'#fff'}}
                 >APPLY</Button>
 
