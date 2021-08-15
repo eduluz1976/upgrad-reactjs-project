@@ -1,0 +1,19 @@
+
+
+.details-container {
+    display: flex;
+}
+
+
+.details-left-part {
+    width: 25%;
+}
+
+.details-middle-part {
+    width: 50%;
+}
+
+.details-right-part {
+    width: 25%;
+}
+

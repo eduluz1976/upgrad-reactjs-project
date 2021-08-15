@@ -6,82 +6,108 @@ const initialState = {
         {
             id: 1,
             title: 'Movie 1',
-            releasedDate: '2020-01-01',
-            img: 'https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg'
+            release_date: '2020-01-01',
+            poster_url: 'https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg'
         },
         {
             id: 2,
             title: 'Movie 2',
-            releasedDate: '2020-01-02',
-            img: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
+            release_date: '2020-01-02',
+            poster_url: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
         },
         {
             id: 3,
             title: 'Movie 3',
-            releasedDate: '2020-01-03',
-            img: 'https://upload.wikimedia.org/wikipedia/en/0/08/Annabelle_Creation.jpg'
+            release_date: '2020-01-03',
+            poster_url: 'https://upload.wikimedia.org/wikipedia/en/0/08/Annabelle_Creation.jpg'
         },
         {
             id: 4,
             title: 'Movie 4',
-            releasedDate: '2020-01-04',
-            img: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
+            release_date: '2020-01-04',
+            poster_url: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
         },
         {
             id: 5,
             title: 'Movie 5',
-            releasedDate: '2020-01-05',
-            img: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
+            release_date: '2020-01-05',
+            poster_url: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
         },
         {
             id: 6,
             title: 'Movie 6',
-            releasedDate: '2020-01-06',
-            img: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
+            release_date: '2020-01-06',
+            poster_url: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
         }
     ],
     upcomingMovies: [
         {
-            id: 1,
+            id: 1001,
             title: 'Movie 1',
-            img: 'https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg'
+            poster_url: 'https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg'
         },
         {
-            id: 2,
+            id: 1002,
             title: 'Movie 2',
-            img: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
+            poster_url: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
         },
         {
-            id: 3,
+            id: 1003,
             title: 'Movie 3',
-            img: 'https://upload.wikimedia.org/wikipedia/en/0/08/Annabelle_Creation.jpg'
+            poster_url: 'https://upload.wikimedia.org/wikipedia/en/0/08/Annabelle_Creation.jpg'
         },
         {
-            id: 4,
+            id: 1004,
             title: 'Movie 4',
-            releasedDate: '2020-01-04',
-            img: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
+            release_date: '2020-01-04',
+            poster_url: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png',
+            genres: ['Action', 'Adventure'],
+            duration: 150,
+            critics_rating: 3.8,
+            story_line: 'This is the plot...',
+            wiki_url: 'https://...',
+            trailer_url: '',
+            artists:[
+                {
+                    id: 1,
+                    first_name: 'Ranbir',
+                    last_name: 'Kapoor',
+                    profile_url: 'https://upload.wikimedia.org/wikipedia/commons/7/72/Ranbir_Kapoor_promoting_Bombay_Velvet.jpg'
+                },
+                {
+                    id: 2,
+                    first_name: 'Matthew',
+                    last_name: 'McConaughey',
+                    profile_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Matthew_McConaughey_-_Goldene_Kamera_2014_-_Berlin.jpg/1024px-Matthew_McConaughey_-_Goldene_Kamera_2014_-_Berlin.jpg'
+                },
+                {
+                    id: 3,
+                    first_name: 'Matthew',
+                    last_name: 'McConaughey',
+                    profile_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Matthew_McConaughey_-_Goldene_Kamera_2014_-_Berlin.jpg/1024px-Matthew_McConaughey_-_Goldene_Kamera_2014_-_Berlin.jpg'
+                }
+            ]
+
         },
         {
-            id: 5,
+            id: 1005,
             title: 'Movie 5',
-            releasedDate: '2020-01-05',
-            img: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
+            release_date: '2020-01-05',
+            poster_url: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
         },
         {
-            id: 6,
+            id: 1006,
             title: 'Movie 6',
-            releasedDate: '2020-01-06',
-            img: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
+            release_date: '2020-01-06',
+            poster_url: 'https://upload.wikimedia.org/wikipedia/en/4/41/Mile_22.png'
         }
     ]
 };
 
 function AppStore(state = initialState, action) {
 
-    console.log('appStore', 
-    state,
-    action.type, action.payload);
+    console.log('appStore.state', state);
+    console.log('appStore.action', action);
 
 
     switch (action.type) {

@@ -1,4 +1,4 @@
-import { GridList, GridListTile, GridListTileBar } from '@material-ui/core';
+import {  GridList, GridListTile, GridListTileBar } from '@material-ui/core';
 import React from 'react';
 import MovieCard from '../../common/movie-card/MovieCard';
 import './GridMovies.css'
@@ -21,8 +21,8 @@ export default function GridMovies() {
 
                 <MovieCard key={item.id}
                 title={"Movie "+item.title}  
-                subTitle={"Released Date "+item.releasedDate}
-                imgSrc={item.img}
+                subTitle={"Released Date "+item.release_date}
+                imgSrc={item.poster_url}
 
                  />
             );

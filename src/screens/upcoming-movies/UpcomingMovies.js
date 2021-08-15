@@ -1,7 +1,7 @@
 import { Grid, GridList, GridListTile, GridListTileBar, ImageListItemBar } from '@material-ui/core';
 import React from 'react';
 import './UpcomingMovies.css';
-import { useSelector } from 'react-redux';
+import { useSelector, useStore } from 'react-redux';
 import MovieCard from '../../common/movie-card/MovieCard';
 
 export default function UpcomingMovies() {
@@ -37,7 +37,7 @@ export default function UpcomingMovies() {
 
                     <MovieCard key={item.id}
                     title={"Movie "+item.title}  
-                    imgSrc={item.img}
+                    imgSrc={item.poster_url}
                     cellHeight={250}
     
                      />
