@@ -2,6 +2,9 @@ import { createStore } from "redux";
 
 const initialState = {
     isAuthDialogOpen: false,
+    loggedUser : {
+        username: 'Eduardo'
+    },
     releasedMovies: [
         {
             id: 1,
@@ -115,6 +118,10 @@ function AppStore(state = initialState, action) {
             return {...state, isAuthDialogOpen: true};
         case 'CLOSE_AUTH_DIALOG':
             return {...state, isAuthDialogOpen: false};
+        case 'AUTH_LOGOUT':
+            return {...state, loggedUser: null};    
+        case 'AUTH_LOGIN':
+            return {...state, loggedUser: action.payload};    
         default:
             return state;
     }
