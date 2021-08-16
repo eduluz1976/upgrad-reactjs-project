@@ -9,9 +9,9 @@ import Middle from './Middle';
 import Right from './Right';
 export default function Details (props) {
 
-    console.log(props);
+    console.log('Details',props);
 
-    const movieId = props.match.params.id;
+    const movieId = props.match.params.id;    
 
     // const movie = useSelector(state => state.upcomingMovies);
 
@@ -30,7 +30,10 @@ export default function Details (props) {
             
             <Header/>
 
-            <Link> &lt;= Back to Home </Link>
+            
+            <Link to={"/"}>
+                &#60; Back to Home
+            </Link>
 
             <div className="details-container">
 
