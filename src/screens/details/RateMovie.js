@@ -23,8 +23,8 @@ export default function RateMovie(props) {
 
         <Rating
         name="hover-feedback"
-        value={movie.rating}
-        precision={0.5}
+        defaultValue={movie.critics_rating}
+        precision={1}
         onChange={(event, newValue) => {
           setValue(newValue);
           console.log('set new rating', newValue);

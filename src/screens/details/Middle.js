@@ -18,7 +18,7 @@ export default function Middle(props) {
         <b>Genre:</b> {movie.genres.join(', ')} <br/>
         <b>Duration:</b> {movie.duration} <br/>
         <b>Release Date:</b> {movie.release_date} <br/>
-        <b>Rating:</b> {movie.rating} <br/> 
+        <b>Rating:</b> {movie.critics_rating} <br/> 
         &nbsp;<br/>
 
         <b>Plot:</b> <Link href={movie.wiki_url}>(Wiki Link)</Link> {movie.story_line} <br/> 
