@@ -4,10 +4,11 @@ import TextField from '@material-ui/core/TextField';
 import DialogActions from '@material-ui/core/DialogActions';
 import Button from '@material-ui/core/Button';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
+import { Typography } from '@material-ui/core';
 
 export default function AuthFormRegister(props) {
 
-
+    const [message, setMessage] = React.useState("  ");
 
     const [registerData, setRegisterData] = React.useState({
         firstName: '',
@@ -16,6 +17,7 @@ export default function AuthFormRegister(props) {
         password: '',
         contactNumber: ''
     });
+
 
     const { firstName, lastName, email, password, contactNumber } = registerData;
 
@@ -29,6 +31,7 @@ export default function AuthFormRegister(props) {
     const onFormSubmitted = (e) => {
         e.preventDefault();
         console.log('onFormSubmitted', registerData);
+        setMessage("Registration Successful. Please Login!");
     }
 
 
@@ -100,9 +103,13 @@ export default function AuthFormRegister(props) {
                         onChange={inputChangedHandler}
                     /><br />
 
-                    <button type="submit" color="primary">
+                    <Typography style={{minHeight:'30px'}}>{message}</Typography>
+
+                    <Button type="submit" 
+                        variant="contained"
+                        color="primary">
                         Register
-                    </button>
+                    </Button>
                 </ValidatorForm>
             </DialogContent>
 

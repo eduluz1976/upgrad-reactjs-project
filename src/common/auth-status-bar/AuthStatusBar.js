@@ -41,8 +41,8 @@ export default function AuthStatusBar (props) {
 
 
     function clickLoginButtonHandler(e) {
-        dispatch({type:"AUTH_LOGIN", payload:{username:'Eduardo'}});
-        // props.clickLoginButtonHandler
+        // dispatch({type:"AUTH_LOGIN", payload:{username:'Eduardo'}});
+        props.clickLoginButtonHandler();
     }
 
 

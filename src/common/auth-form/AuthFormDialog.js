@@ -15,8 +15,8 @@ import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 
 import './AuthFormDialog.css';
-import AuthFormLogin from '../auth-form-login/AuthFormLogin';
-import AuthFormRegister from '../auth-form-register/AuthFormRegister';
+import AuthFormLogin from './AuthFormLogin.js';
+import AuthFormRegister from './AuthFormRegister.js';
 
 
 export default function AuthFormDialog(props) {

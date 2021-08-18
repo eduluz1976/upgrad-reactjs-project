@@ -72,9 +72,12 @@ export default function AuthFormLogin(props) {
                     <br />
 
 
-                    <button color="primary" type="submit">
+                    <Button color="primary" 
+                    type="submit"                    
+                    variant="contained"
+                    >
                         Login
-                </button>
+                </Button>
 
                 </ValidatorForm>
             </DialogContent>
