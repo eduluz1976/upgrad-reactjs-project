@@ -7,14 +7,11 @@ import Controller from './screens/Controller';
 import store from './common/app-store/AppStore';
 import { Provider } from 'react-redux';
 
-// import { ThemeProvider } from '@material-ui/core/styles';
-// import theme from './assets/theme';
 
 const config = {
-    baseUrl: 'http://abc/'
+    baseUrl: 'http://localhost:3000/api/v1/'
 };
 
-// ReactDOM.render(<ThemeProvider theme={theme}><Controller /></ThemeProvider>, document.getElementById('root'));
 ReactDOM.render(
     <Provider store={store}><Controller config={config} /></Provider>
     , document.getElementById('root'));
