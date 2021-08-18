@@ -23,6 +23,7 @@ export default function GridMovies() {
                 title={"Movie "+item.title}  
                 subTitle={"Released Date "+item.release_date}
                 imgSrc={item.poster_url}
+                movieData={item}
 
                  />
             );

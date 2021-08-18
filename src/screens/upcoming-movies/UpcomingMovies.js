@@ -39,6 +39,7 @@ export default function UpcomingMovies() {
                     title={"Movie "+item.title}  
                     imgSrc={item.poster_url}
                     cellHeight={250}
+                    movieData={item}
     
                      />
 

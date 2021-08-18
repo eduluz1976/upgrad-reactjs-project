@@ -7,6 +7,7 @@ import './Details.css'
 import Left from './Left';
 import Middle from './Middle';
 import Right from './Right';
+import LoadMoviesService from '../../common/services/LoadMoviesService';
 export default function Details (props) {
 
     console.log('Details',props);
@@ -15,7 +16,15 @@ export default function Details (props) {
 
     // const movie = useSelector(state => state.upcomingMovies);
 
-    const movie = FindMovieById(movieId);
+    let movie = JSON.parse(sessionStorage.getItem('currentMovie'));
+    if (!movie) {
+        LoadMoviesService({ baseUrl: 'http://localhost:3000/api/v1/'});
+        movie = FindMovieById(movieId);
+        
+    }
+    console.log('Details', movie);
+    
+
 
     if (movie == undefined) {
         return (
@@ -31,7 +40,7 @@ export default function Details (props) {
             <Header/>
 
             
-            <Link to={"/"}>
+            <Link href="/">
                 &#60; Back to Home
             </Link>
 
