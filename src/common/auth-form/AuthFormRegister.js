@@ -5,8 +5,9 @@ import DialogActions from '@material-ui/core/DialogActions';
 import Button from '@material-ui/core/Button';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import { Typography } from '@material-ui/core';
+import AuthSignupService from './AuthSignupService';
 
-export default function AuthFormRegister(props) {
+export default  function AuthFormRegister(props) {
 
     const [message, setMessage] = React.useState("  ");
 
@@ -30,8 +31,16 @@ export default function AuthFormRegister(props) {
 
     const onFormSubmitted = (e) => {
         e.preventDefault();
-        console.log('onFormSubmitted', registerData);
-        setMessage("Registration Successful. Please Login!");
+
+        AuthSignupService(registerData)
+            .then((signupResponse) => {
+                setMessage(signupResponse.message);
+                console.log("signupResponse",signupResponse);
+            }).catch(error => {
+                setMessage(error.message);
+                console.log("signupResponse",signupResponse);
+            })
+        
     }
 
 

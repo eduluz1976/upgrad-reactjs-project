@@ -2,6 +2,7 @@ import { Button } from '@material-ui/core';
 import React from 'react';
 import { useSelector, useStore, useDispatch } from 'react-redux';
 import { useHistory, useRouteMatch } from 'react-router';
+import AuthLogoutService from '../auth-form/AuthLogoutService';
 import './AuthStatusBar.css';
 
 export default function AuthStatusBar (props) {
@@ -41,13 +42,22 @@ export default function AuthStatusBar (props) {
 
 
     function clickLoginButtonHandler(e) {
-        // dispatch({type:"AUTH_LOGIN", payload:{username:'Eduardo'}});
         props.clickLoginButtonHandler();
     }
 
 
     function clickLogoutButtonHandler(e) {
-        dispatch({type:"AUTH_LOGOUT"});
+
+
+        const accessToken = sessionStorage.getItem('access-token');
+
+        AuthLogoutService({accessToken: accessToken})
+        .then(response => {
+            sessionStorage.setItem('user-profile', false);
+            sessionStorage.setItem('access-token', false);
+            dispatch({type:"AUTH_LOGOUT"});
+        });
+        
     }
 
     function clickBookShowButtonHandler() {
