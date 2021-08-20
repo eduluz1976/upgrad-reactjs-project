@@ -7,6 +7,7 @@ import AuthFormDialog from '../../common/auth-form/AuthFormDialog';
 export default function Header() {
 
     const [isAuthFormDialogOpen, setIsAuthFormDialogOpen] = React.useState({isOpen: false});
+
     
     const onClickLoginButton = () => {
         console.log('Opening the Input dialog');

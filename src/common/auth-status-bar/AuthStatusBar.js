@@ -63,8 +63,15 @@ export default function AuthStatusBar (props) {
     function clickBookShowButtonHandler() {
         console.log(route.params);
         let movieId = route.params.id;
+
+        const isLogged = IsUserLogged();
         
-        if (movieId !== undefined && movieId>0) {
+        if (!isLogged) {
+            props.clickLoginButtonHandler();
+            // TODO improvement = when user login into the app, 
+            // back to execute this function again  
+            return;
+        }else  if (movieId !== undefined && movieId.length > 1) {            
             history.push('/book/'+movieId);
             return;
         } 
@@ -74,12 +81,11 @@ export default function AuthStatusBar (props) {
 
     return (
         <div className="auth-status-bar">
-
+            <Button variant="contained" color="primary"
+                    name="BookShow" style={stylesButtons.bookMovie} onClick={clickBookShowButtonHandler}>Book Show</Button>
             <Button name="Login" variant="contained" style={stylesButtons.login} onClick={clickLoginButtonHandler}>Login</Button>
             <Button name="Logout" variant="contained" style={stylesButtons.logout} onClick={clickLogoutButtonHandler}>Logout</Button>
-            <Button variant="contained"
-            color="primary"
-            name="BookShow" style={stylesButtons.bookMovie} onClick={clickBookShowButtonHandler}>Book Show</Button>
+            
 
         </div>
     );
