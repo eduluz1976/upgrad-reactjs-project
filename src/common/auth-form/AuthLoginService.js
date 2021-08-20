@@ -29,7 +29,8 @@ export default async function AuthLoginService(parms) {
         
         return {userData: json, success: true, accessToken: rawResult.headers.get('access-token')};
       } else {
-        return {message: json.message, success: false};
+        throw new Error(json.message);
+        //return {message: json.message, success: false};
       }
 
 

@@ -3,12 +3,12 @@ import React from 'react';
 import { useSelector, useStore, useDispatch } from 'react-redux';
 import { useHistory, useRouteMatch } from 'react-router';
 import AuthLogoutService from '../auth-form/AuthLogoutService';
+import IsUserLogged from '../library/IsUserLogged';
 import './AuthStatusBar.css';
 
 export default function AuthStatusBar (props) {
-
-
-    const loggedUser = useSelector(state => state.loggedUser);
+    
+    const loggedUser = IsUserLogged(); //useSelector(state => state.loggedUser);
     const appStore = useStore();
     const dispatch = useDispatch();
     const history = useHistory();
@@ -25,10 +25,10 @@ export default function AuthStatusBar (props) {
             bookMovie: {display: 'none' },
         }
 
-        if (loggedUser == undefined) {
-            response.login.display = 'block';
-        } else {
+        if (loggedUser) {
             response.logout.display = 'block';
+        } else {
+            response.login.display = 'block';            
         }
 
         
@@ -75,15 +75,11 @@ export default function AuthStatusBar (props) {
     return (
         <div className="auth-status-bar">
 
-            
-
             <Button name="Login" variant="contained" style={stylesButtons.login} onClick={clickLoginButtonHandler}>Login</Button>
             <Button name="Logout" variant="contained" style={stylesButtons.logout} onClick={clickLogoutButtonHandler}>Logout</Button>
             <Button variant="contained"
             color="primary"
             name="BookShow" style={stylesButtons.bookMovie} onClick={clickBookShowButtonHandler}>Book Show</Button>
-
-         
 
         </div>
     );

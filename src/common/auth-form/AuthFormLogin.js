@@ -13,6 +13,7 @@ import { useDispatch } from 'react-redux';
 
 export default function AuthFormLogin(props) {
 
+    const [hasError, setHasError] = useState({err: false, message:''});
     const [isModalOpen, setIsModalOpen] = useState(true);
 
     const [loginData, setLoginData] = React.useState({
@@ -45,8 +46,15 @@ export default function AuthFormLogin(props) {
             })
             .catch(error => {
                 console.log('Error on Login',error);
+                setHasError({...hasError,  err: true, message: error.message});
             })
     }
+
+    const displayErrorMessage = () => {        
+        if (hasError.err) {
+            return <div>{hasError.message}</div>;
+        }        
+    };
 
     return (
         <div role="tabpanel" id="tab-form-login" hidden={!isModalOpen}>
@@ -88,6 +96,8 @@ export default function AuthFormLogin(props) {
 
 
                     <br />
+
+                    {displayErrorMessage()}
 
 
                     <Button color="primary" 
