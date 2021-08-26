@@ -31,7 +31,7 @@ export default function MovieCard(props) {
         if (props.width) {
             response.width = props.width ;
         }
-        console.log('getCustomStyle', props, response);
+        // console.log('getCustomStyle', props, response);
         return response;
     }
 

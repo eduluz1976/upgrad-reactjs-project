@@ -14,8 +14,8 @@ const initialState = {
 
 function AppStore(state = initialState, action) {
 
-    console.log('appStore.state', state);
-    console.log('appStore.action', action);
+    // console.log('appStore.state', state);
+    // console.log('appStore.action', action);
 
 
     switch (action.type) {

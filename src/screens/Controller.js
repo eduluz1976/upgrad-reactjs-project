@@ -11,7 +11,7 @@ import LoadMoviesService from '../common/services/LoadMoviesService';
 export default function Controller(props) {
 
     const config = props.config;
-    console.log('Controller', props);
+    // console.log('Controller', props);
 
      
     LoadMoviesService(config);
