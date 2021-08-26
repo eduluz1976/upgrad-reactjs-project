@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './FilterMovies.css';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import Card from '@material-ui/core/Card';
@@ -13,39 +13,27 @@ import FilterMoviesFormName from './FilterMoviesFormName';
 import FilterMoviesFormGenres from './FilterMoviesFormGenres';
 import FilterMoviesFormArtists from './FilterMoviesFormArtists';
 import FilterMoviesFormReleaseDate from './FilterMoviesFormReleaseDate';
+import { useSelector } from 'react-redux';
 // import theme from './FilterTheme';
 
 
 
-export default function FilterMovies() {
+export default function FilterMovies(props) {
+
+    const artists = useSelector(state => state.artists);
+
+    const [artistsList, setArtistsList] = useState(artists
+    );
 
 
     
-// const theme =  makeStyles({});
-// createTheme({
-//     palette: {
-//       primary: light,
-//     },
-//   });
+    const doFilterMovies = () => {
+        const selectedArtists = artistsList.filter(item => item.isSelected);
+        console.log("doFilterMovies-selectedArtists",selectedArtists);
+    }
 
-
-// const themeInstance = {
-//     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-//   };
-
-//  <ThemeProvider  theme={themeInstance}>
-//  </ThemeProvider>
-
-
-// const theme = createMuiTheme({
- 
-// })
 
     return (
-
-
-       
-        
         
             <Card className="filter-movies-card-container"
             >
@@ -58,7 +46,7 @@ export default function FilterMovies() {
 
 
 
-                <FilterMoviesFormName/>
+                <FilterMoviesFormName />
 
                 <br/>
 
@@ -66,7 +54,7 @@ export default function FilterMovies() {
 
                <br/>
 
-               <FilterMoviesFormArtists/>
+               <FilterMoviesFormArtists artistsList={artistsList} setArtistsList={setArtistsList} />
 
                <br/>
 
@@ -80,6 +68,7 @@ export default function FilterMovies() {
 
                 <Button
                 contained="true"
+                onClick={doFilterMovies}
                 style={{backgroundColor:'#0f0ff0', width:'100%',color:'#fff'}}
                 >APPLY</Button>
 

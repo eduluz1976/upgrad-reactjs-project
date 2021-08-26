@@ -19,7 +19,7 @@ export default function UpcomingMovies() {
 
 
             <ImageList
-            cellHeight={250}
+            rowHeight={250}
             
             
             
@@ -38,7 +38,7 @@ export default function UpcomingMovies() {
                     <MovieCard key={item.id}
                     title={"Movie "+item.title}  
                     imgSrc={item.poster_url}
-                    cellHeight={250}
+                    rowHeight={250}
                     movieData={item}
                     width={'17%'}
                      />

@@ -13,7 +13,7 @@ export default function GridMovies() {
     return (
         
         <ImageList
-        cellHeight={350}
+        rowHeight={350}
         cols={4}
          >
 
