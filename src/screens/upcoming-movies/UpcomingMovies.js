@@ -1,4 +1,4 @@
-import { Grid, GridList, GridListTile, GridListTileBar, ImageListItemBar } from '@material-ui/core';
+import { Grid, GridList, GridListTile, GridListTileBar, ImageList, ImageListItemBar } from '@material-ui/core';
 import React from 'react';
 import './UpcomingMovies.css';
 import { useSelector, useStore } from 'react-redux';
@@ -18,7 +18,7 @@ export default function UpcomingMovies() {
             <div className="upcoming-movies-container">
 
 
-            <GridList
+            <ImageList
             cellHeight={250}
             
             
@@ -40,7 +40,7 @@ export default function UpcomingMovies() {
                     imgSrc={item.poster_url}
                     cellHeight={250}
                     movieData={item}
-    
+                    width={'17%'}
                      />
 
     
@@ -48,7 +48,7 @@ export default function UpcomingMovies() {
             })}
 
 
-            </GridList>
+            </ImageList>
 
 
 

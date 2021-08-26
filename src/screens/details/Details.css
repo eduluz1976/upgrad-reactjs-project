@@ -1,19 +1,14 @@
 
 
 .details-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    column-gap: 10px;
 }
 
-
-.details-left-part {
-    width: 25%;
+.details-left-part img {
+    width: 100%;
+    min-width: 120px;
 }
 
-.details-middle-part {
-    width: 50%;
-}
-
-.details-right-part {
-    width: 25%;
-}
 

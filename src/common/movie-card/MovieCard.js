@@ -1,4 +1,4 @@
-import { GridListTile, GridListTileBar, Link } from '@material-ui/core';
+import { GridListTile, GridListTileBar, ImageListItem, Link } from '@material-ui/core';
 import React from 'react'
 import './MovieCard.css';
 import { useHistory, useRouteMatch } from 'react-router';
@@ -28,6 +28,10 @@ export default function MovieCard(props) {
         if (props.cellHeight) {
             response.height = props.cellHeight;
         }
+        if (props.width) {
+            response.width = props.width ;
+        }
+        console.log('getCustomStyle', props, response);
         return response;
     }
 
@@ -45,11 +49,12 @@ export default function MovieCard(props) {
 
 
     return (
+
         <GridListTile  className="movie-card-container"
         style={getCustomStyle()}
         >
 
-        <img src={props.imgSrc} alt={props.title} onClick={goToMovieDetails}/>
+        <img src={props.imgSrc} alt={props.title}  onClick={goToMovieDetails} />        
 
         <GridListTileBar
             title={props.title}

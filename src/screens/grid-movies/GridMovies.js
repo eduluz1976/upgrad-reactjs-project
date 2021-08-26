@@ -1,4 +1,4 @@
-import {  GridList, GridListTile, GridListTileBar } from '@material-ui/core';
+import {  GridList, GridListTile, GridListTileBar, ImageList } from '@material-ui/core';
 import React from 'react';
 import MovieCard from '../../common/movie-card/MovieCard';
 import './GridMovies.css'
@@ -12,9 +12,10 @@ export default function GridMovies() {
 
     return (
         
-        <GridList
+        <ImageList
         cellHeight={350}
-        cols={4} >
+        cols={4}
+         >
 
         {list.map((item) => {
             return (
@@ -24,13 +25,14 @@ export default function GridMovies() {
                 subTitle={"Released Date "+item.release_date}
                 imgSrc={item.poster_url}
                 movieData={item}
+                width='25%'               
 
                  />
             );
         })}
 
 
-        </GridList>
+        </ImageList>
 
     );
 

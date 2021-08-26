@@ -1,6 +1,5 @@
 .home-grid-movies-container {
     width: 76%;
-    /* background-color: blueviolet; */
     display: flex;
     flex-direction: column;
     margin: 16px;
@@ -8,7 +7,6 @@
 
 .home-filter-movies-container {
     width: 24%;
-    /* background-color: yellow; */
     display: flex;
     margin: 16px;
 }
