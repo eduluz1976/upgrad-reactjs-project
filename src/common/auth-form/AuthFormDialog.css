@@ -1,0 +1,10 @@
+
+.login-form {
+    color: red;
+    text-align: center;
+}
+
+.auth-form-register-message {
+    min-width: 30px;
+    color: #000;
+}

@@ -9,12 +9,12 @@ import Button from '@material-ui/core/Button';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import AuthLoginService from './AuthLoginService';
 import { useDispatch } from 'react-redux';
-
+import './AuthFormDialog.css';
 
 export default function AuthFormLogin(props) {
 
     const [hasError, setHasError] = useState({err: false, message:''});
-    const [isModalOpen, setIsModalOpen] = useState(true);
+    // const [isModalOpen, setIsModalOpen] = useState(true);
 
     const [loginData, setLoginData] = React.useState({
         email: '',
@@ -57,7 +57,7 @@ export default function AuthFormLogin(props) {
     };
 
     return (
-        <div role="tabpanel" id="tab-form-login" hidden={!isModalOpen}>
+        <div role="tabpanel" id="tab-form-login" hidden={!props.isLoginOpen}>
             <DialogContent>
 
                 <ValidatorForm className="login-form" onSubmit={onFormSubmitted} >
@@ -65,12 +65,12 @@ export default function AuthFormLogin(props) {
                     <TextValidator
                         name="email"
                         id="auth-form-login-email"
-                        label="Email Address"
+                        label="Username *"
                         type="email"
                         value={email}
                         onChange={inputChangedHandler}
                         validators={['required']}
-                        errorMessages="Email is required"
+                        errorMessages="Email is required"                        
                     ></TextValidator>
 
 
@@ -87,7 +87,7 @@ export default function AuthFormLogin(props) {
                         errorMessages="Password is required"
 
                         id="auth-form-login-password"
-                        label="Password"
+                        label="Password *"
                         type="password"
                         value={password}
                     ></TextValidator>

@@ -24,27 +24,22 @@ export default function AuthFormDialog(props) {
 
     const [state, setIsLoginOpen] = React.useState({ isLoginOpen: true, index: 0 });
 
-
-
     const onChangePanel = (e) => {
-
         let newState = state;
         if (state.isLoginOpen) {
             newState = { isLoginOpen: false, index: 1 };
         } else {
             newState = { isLoginOpen: true, index: 0 };
         }
-
-        setIsLoginOpen({ ...state, ...newState });
+        const finalState = { ...state, ...newState };
+        setIsLoginOpen(finalState);
     }
 
     return (
         <div>
             <Dialog open={props.isAuthFormDialogOpen.isOpen} onClose={props.handleCloseAuthFormDialog} aria-labelledby="form-dialog-title">
                 <Tabs value={state.index} onChange={onChangePanel}
-
-                    indicatorColor="primary"
-                    textColor="primary"
+                    indicatorColor="secondary"                    
                     variant="fullWidth"
                     aria-label="full width tabs example"
 

@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import { Typography } from '@material-ui/core';
 import AuthSignupService from './AuthSignupService';
+import './AuthFormDialog.css';
 
 export default  function AuthFormRegister(props) {
 
@@ -53,7 +54,7 @@ export default  function AuthFormRegister(props) {
                         name="firstName"
                         margin="dense"
                         id="auth-form-register-first-name"
-                        label="First Name"
+                        label="First Name *"
                         type="text"
                         value={firstName}
                         validators={['required']}
@@ -66,7 +67,7 @@ export default  function AuthFormRegister(props) {
                         name="lastName"
                         margin="dense"
                         id="auth-form-register-last-name"
-                        label="Last Name"
+                        label="Last Name *"
                         type="text"
                         value={lastName}
                         validators={['required']}
@@ -81,7 +82,7 @@ export default  function AuthFormRegister(props) {
                         value={email}
                         margin="dense"
                         id="auth-form-register-email"
-                        label="Email Address"
+                        label="Email *"
                         type="email"
                         validators={['required']}
                         errorMessages="Email is required"
@@ -93,7 +94,7 @@ export default  function AuthFormRegister(props) {
                         value={password}
                         margin="dense"
                         id="auth-form-register-password"
-                        label="Password"
+                        label="Password *"
                         type="password"
                         validators={['required']}
                         errorMessages="Password is required"
@@ -105,15 +106,15 @@ export default  function AuthFormRegister(props) {
                         value={contactNumber}
                         margin="dense"
                         id="auth-form-register-contact-number"
-                        label="Contact Number"
+                        label="Contact No. *"
                         type="text"
                         validators={['required']}
                         errorMessages="Contact number is required"
                         onChange={inputChangedHandler}
                     /><br />
 
-                    <Typography style={{minHeight:'30px'}}>{message}</Typography>
-
+                    <Typography className='auth-form-register-message' >{message}</Typography>
+                    
                     <Button type="submit" 
                         variant="contained"
                         color="primary">
