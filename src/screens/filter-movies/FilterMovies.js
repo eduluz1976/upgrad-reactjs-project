@@ -20,10 +20,18 @@ import { useSelector } from 'react-redux';
 
 export default function FilterMovies(props) {
 
-    const artists = useSelector(state => state.artists);
 
-    const [artistsList, setArtistsList] = useState(artists
-    );
+    const artists = useSelector(state => state.artists);
+    const [artistsList, setArtistsList] = useState([]);
+
+    const genres = useSelector(state => state.genres);
+    const [genresList, setGenresList] = useState([]);
+
+    useEffect(() => {
+        setArtistsList(artists);
+        setGenresList(genres);
+    }
+    ,[]);
 
 
     
@@ -50,7 +58,7 @@ export default function FilterMovies(props) {
 
                 <br/>
 
-               <FilterMoviesFormGenres/>
+               <FilterMoviesFormGenres genresList={genresList} setGenresList={setGenresList}  />
 
                <br/>
 
