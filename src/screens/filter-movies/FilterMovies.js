@@ -36,8 +36,15 @@ export default function FilterMovies(props) {
 
     
     const doFilterMovies = () => {
+
+        
         const selectedArtists = artistsList.filter(item => item.isSelected);
+        const selectedGenres = genresList.filter(item => item.isSelected);
+
+
+
         console.log("doFilterMovies-selectedArtists",selectedArtists);
+        console.log("doFilterMovies-selectedGenres",selectedGenres);
     }
 
 
