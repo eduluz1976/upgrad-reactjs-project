@@ -5,7 +5,7 @@ import Box from '@material-ui/core/Box';
 import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import { Typography } from '@material-ui/core';
-
+import './Details.css'
 
 export default function RateMovie(props) {
 
@@ -16,10 +16,10 @@ export default function RateMovie(props) {
 
     return (
         <div>
-        <Typography>
-        <b>Rate this movie</b> <br/>
-    </Typography>        
-
+        <Typography className='sub-title'>
+          Rate this movie 
+        </Typography>        
+        <br/>
 
         <Rating
         name="hover-feedback"

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { useSelector } from 'react-redux';
 import FindMovieById from '../../common/library/FindMovieById';
 import Header from '../../common/header/Header.js';
-import { Link } from '@material-ui/core';
+import { Link, Typography } from '@material-ui/core';
 import './Details.css'
 import Left from './Left';
 import Middle from './Middle';
@@ -39,13 +39,10 @@ export default function Details (props) {
             
             <Header/>
 
-            
-            <Link href="/">
-                &#60; Back to Home
-            </Link>
+          
 
             <div className="details-container">
-
+        
                 <Left movie={movie}/>
                 <Middle movie={movie}/>
                 <Right movie={movie}/>

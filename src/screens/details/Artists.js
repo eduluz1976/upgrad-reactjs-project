@@ -9,7 +9,7 @@ export default function Artists(props) {
 
     return (
         <Fragment>
-            <Typography className="artist-title">
+            <Typography className="sub-title">
              Artists:
             </Typography>        
         <ImageList cols={2} rowHeight={180}>
