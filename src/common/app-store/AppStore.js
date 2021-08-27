@@ -28,10 +28,6 @@ function AppStore(state = initialState, action) {
             return {...state, loggedUser: null};    
         case 'AUTH_LOGIN':
             return {...state, loggedUser: action.payload};    
-        case 'LOAD_ARTISTS':
-            return {...state, artists: action.payload};                
-        case 'LOAD_GENRES':
-            return {...state, genres: action.payload};                
         case 'LOAD_MOVIES':
             return {...state, 
                     releasedMovies: action.payload.filter(item=>{return item.status==='RELEASED'}),
