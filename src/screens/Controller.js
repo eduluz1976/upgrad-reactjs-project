@@ -6,7 +6,6 @@ import Details from './details/Details';
 import BookShow from './bookshow/BookShow';
 import Confirmation from './confirmation/Confirmation';
 import LoadMoviesService from '../common/services/LoadMoviesService';
-import LoadFilterData from '../common/services/LoadFilterData';
 
 
 export default function Controller(props) {
@@ -14,9 +13,9 @@ export default function Controller(props) {
     const config = props.config;
     // console.log('Controller', props);
 
-     
+    
     LoadMoviesService(config);
-    LoadFilterData(config);
+
      
 
     return (

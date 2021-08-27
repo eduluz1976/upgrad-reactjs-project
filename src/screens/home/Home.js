@@ -6,7 +6,8 @@ import UpcomingMovies from '../upcoming-movies/UpcomingMovies.js';
 import './Home.css';
 
 
-export default function Home() {
+export default function Home(props) {
+
     return (
         <Fragment>
         <Header></Header>
@@ -17,7 +18,7 @@ export default function Home() {
                 <GridMovies />
             </div>
             <div className="home-filter-movies-container">
-                <FilterMovies/>
+                <FilterMovies baseUrl={props.baseUrl} />
             </div>
         </div>
 

@@ -21,15 +21,47 @@ import { useSelector } from 'react-redux';
 export default function FilterMovies(props) {
 
 
-    const artists = useSelector(state => state.artists);
+    const [movieName, setMovieName] = useState('');
+    const [releaseDateStart, setReleaseDateStart] = useState(false);
+    const [releaseDateEnd, setReleaseDateEnd] = useState(false);
+
     const [artistsList, setArtistsList] = useState([]);
 
-    const genres = useSelector(state => state.genres);
     const [genresList, setGenresList] = useState([]);
 
     useEffect(() => {
-        setArtistsList(artists);
-        setGenresList(genres);
+
+
+    fetch(props.baseUrl + "/artists?limit=1000", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "Cache-Control": "no-cache"
+        }
+      })
+        .then((response) => response.json())
+        .then((response) => {
+          console.log(response.artists);
+          setArtistsList(response.artists);
+        });  
+    }
+    ,[]);
+
+    useEffect(() => {
+
+
+        fetch(props.baseUrl + "/genres?limit=100", {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              "Cache-Control": "no-cache"
+            }
+          })
+            .then((response) => response.json())
+            .then((response) => {
+              console.log(response.genres);
+              setGenresList(response.genres);
+            });  
     }
     ,[]);
 
@@ -43,10 +75,23 @@ export default function FilterMovies(props) {
 
 
 
+        console.log("doFilterMovies-movieName",movieName);
         console.log("doFilterMovies-selectedArtists",selectedArtists);
         console.log("doFilterMovies-selectedGenres",selectedGenres);
+        console.log("doFilterMovies-releaseDateStart",releaseDateStart);
+        console.log("doFilterMovies-releaseDateEnd",releaseDateEnd);
     }
 
+    function movieNameHandler(e) {
+        setMovieName(e.target.value);
+    }
+
+    function releaseDateStartHandler(e) {
+        setReleaseDateStart(e.target.value);
+    }
+    function releaseDateEndHandler(e) {
+        setReleaseDateEnd(e.target.value);
+    }
 
     return (
         
@@ -61,7 +106,7 @@ export default function FilterMovies(props) {
 
 
 
-                <FilterMoviesFormName />
+                <FilterMoviesFormName setMovieName={movieNameHandler} />
 
                 <br/>
 
@@ -73,11 +118,11 @@ export default function FilterMovies(props) {
 
                <br/>
 
-               <FilterMoviesFormReleaseDate label="Release Date Start"/>
+               <FilterMoviesFormReleaseDate label="Release Date Start"  setReleaseDate={releaseDateStartHandler} />
 
                <br/>
 
-               <FilterMoviesFormReleaseDate label="Release Date End"/>
+               <FilterMoviesFormReleaseDate label="Release Date End" setReleaseDate={releaseDateEndHandler} />
 
                <br/>
 

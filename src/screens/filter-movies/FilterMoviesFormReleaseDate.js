@@ -5,6 +5,7 @@ import React from 'react';
 
 export default function FilterMoviesFormReleaseDate (props) {
 
+    const setReleaseDate = props.setReleaseDate;
 
     return (        
         <FormControl style={{width:'100%'}}>                      
@@ -15,6 +16,9 @@ export default function FilterMoviesFormReleaseDate (props) {
         InputLabelProps={{
             shrink: true,
           }}
+
+          onChange={setReleaseDate}
+
         />
     </FormControl>
     );

@@ -3,14 +3,15 @@ import React from 'react';
 
 
 
-export default function FilterMoviesFormName () {
+export default function FilterMoviesFormName (props) {
 
+    const setMovieName=props.setMovieName
 
     return (        
         <FormControl style={{width:'100%'}}>                
         <InputLabel>Movie Name
         </InputLabel>
-        <Input ></Input>          
+        <Input onChange={setMovieName} ></Input>          
     </FormControl>
     );
 
