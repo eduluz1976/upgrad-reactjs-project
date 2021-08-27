@@ -22,12 +22,14 @@ export default function FilterMovies(props) {
 
 
     const [movieName, setMovieName] = useState('');
-    const [releaseDateStart, setReleaseDateStart] = useState(false);
-    const [releaseDateEnd, setReleaseDateEnd] = useState(false);
+    const [releaseDateStart, setReleaseDateStart] = useState('');
+    const [releaseDateEnd, setReleaseDateEnd] = useState('');
 
     const [artistsList, setArtistsList] = useState([]);
 
     const [genresList, setGenresList] = useState([]);
+
+    const onFilter = props.onFilter;
 
     useEffect(() => {
 
@@ -44,11 +46,6 @@ export default function FilterMovies(props) {
           console.log(response.artists);
           setArtistsList(response.artists);
         });  
-    }
-    ,[]);
-
-    useEffect(() => {
-
 
         fetch(props.baseUrl + "/genres?limit=100", {
             method: "GET",
@@ -73,13 +70,13 @@ export default function FilterMovies(props) {
         const selectedArtists = artistsList.filter(item => item.isSelected);
         const selectedGenres = genresList.filter(item => item.isSelected);
 
-
-
-        console.log("doFilterMovies-movieName",movieName);
-        console.log("doFilterMovies-selectedArtists",selectedArtists);
-        console.log("doFilterMovies-selectedGenres",selectedGenres);
-        console.log("doFilterMovies-releaseDateStart",releaseDateStart);
-        console.log("doFilterMovies-releaseDateEnd",releaseDateEnd);
+        onFilter({
+            movieName: movieName,
+            selectedArtists: selectedArtists,
+            selectedGenres: selectedGenres,
+            releaseDateStart: releaseDateStart,
+            releaseDateEnd: releaseDateEnd
+        });
     }
 
     function movieNameHandler(e) {

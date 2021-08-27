@@ -5,10 +5,10 @@ import './GridMovies.css'
 
 import { useSelector } from 'react-redux';
 
-export default function GridMovies() {
+export default function GridMovies(props) {
 
 
-    const list = useSelector(state => state.releasedMovies);
+    const list = props.list;    
 
     return (
         
@@ -17,7 +17,7 @@ export default function GridMovies() {
         cols={4}
          >
 
-        {list.map((item) => {
+        {props.list.map((item) => {            
             return (
 
                 <MovieCard key={item.id}
