@@ -10,7 +10,6 @@ export default function FilterMoviesFormArtists (props) {
 
     const toggleCheckboxValue = (index) => {
         const newArtistsList = artistsList.map((v, i) => {
-            console.log(`v ${i} = `, v);
             let isSelected = false;
             if (!v.isSelected) {
                 if (i===index) {
@@ -29,8 +28,6 @@ export default function FilterMoviesFormArtists (props) {
             return {...v, isSelected:isSelected};
         });
 
-        console.log('newArtistsList', newArtistsList);
-
         setArtistsList(newArtistsList);
     }
 
@@ -40,7 +37,6 @@ export default function FilterMoviesFormArtists (props) {
         </InputLabel>
             <Select >
             { artistsList.map( (item, index) => {
-                console.log('artistsList.map', index, item);
                 return (
                 <MenuItem key={index} value={item.id}  selected={item.isSelected}>
                     <Checkbox key={index} checked={item.isSelected}
