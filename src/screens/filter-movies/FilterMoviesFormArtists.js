@@ -7,6 +7,7 @@ export default function FilterMoviesFormArtists (props) {
 
     const artistsList = props.artistsList;
     const setArtistsList=props.setArtistsList; 
+    const selectedArtists = '';
 
     const toggleCheckboxValue = (index) => {
         const newArtistsList = artistsList.map((v, i) => {
@@ -35,7 +36,7 @@ export default function FilterMoviesFormArtists (props) {
         <FormControl style={{width:'100%'}}>                
         <InputLabel>Artists
         </InputLabel>
-            <Select >
+            <Select value={selectedArtists} >
             { artistsList.map( (item, index) => {
                 return (
                 <MenuItem key={index} value={item.id}  selected={item.isSelected}>

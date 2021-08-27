@@ -7,6 +7,7 @@ export default function FilterMoviesFormGenres (props) {
 
     const genresList = props.genresList;
     const setGenresList=props.setGenresList; 
+    const selectedGenres = '';
 
     const toggleCheckboxValue = (index) => {
         const newGenresList = genresList.map((v, i) => {
@@ -35,7 +36,7 @@ export default function FilterMoviesFormGenres (props) {
         <FormControl style={{width:'100%'}}>                
         <InputLabel>Movie Genres
         </InputLabel>
-        <Select >
+        <Select value={selectedGenres} >
         { genresList.map( (item, index) => {
             return (
             <MenuItem key={index} value={item.id}  selected={item.isSelected}>
