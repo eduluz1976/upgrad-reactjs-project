@@ -7,6 +7,12 @@ export default function Artists(props) {
 
     const movie = props.movie;
 
+    if (!movie.artists) {
+        return (
+            <p>&nbsp;</p>
+        );
+    }
+
     return (
         <Fragment>
             <Typography className="sub-title">
