@@ -32,10 +32,9 @@ export default function AuthFormLogin(props) {
 
     const onFormSubmitted = (e) => {
         e.preventDefault();
-        console.log('onFormSubmitted', loginData);
+
         AuthLoginService(loginData)
             .then(response => {
-                console.log('Login ok',response);
                 
                 sessionStorage.setItem('user-profile', JSON.stringify(response.userData));
                 sessionStorage.setItem('access-token', response.accessToken);
@@ -45,7 +44,6 @@ export default function AuthFormLogin(props) {
                 props.onClose();
             })
             .catch(error => {
-                console.log('Error on Login',error);
                 setHasError({...hasError,  err: true, message: error.message});
             })
     }

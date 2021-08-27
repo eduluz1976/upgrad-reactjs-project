@@ -43,7 +43,6 @@ export default function FilterMovies(props) {
       })
         .then((response) => response.json())
         .then((response) => {
-          console.log(response.artists);
           setArtistsList(response.artists);
         });  
 
@@ -56,7 +55,6 @@ export default function FilterMovies(props) {
           })
             .then((response) => response.json())
             .then((response) => {
-              console.log(response.genres);
               setGenresList(response.genres);
             });  
     }

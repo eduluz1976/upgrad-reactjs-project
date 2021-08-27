@@ -10,11 +10,8 @@ import Right from './Right';
 import LoadMoviesService from '../../common/services/LoadMoviesService';
 export default function Details (props) {
 
-    console.log('Details',props);
 
     const movieId = props.match.params.id;    
-
-    // const movie = useSelector(state => state.upcomingMovies);
 
     let movie = JSON.parse(sessionStorage.getItem('currentMovie'));
     if (!movie) {
@@ -22,9 +19,6 @@ export default function Details (props) {
         movie = FindMovieById(movieId);
         
     }
-    console.log('Details', movie);
-    
-
 
     if (movie == undefined) {
         return (

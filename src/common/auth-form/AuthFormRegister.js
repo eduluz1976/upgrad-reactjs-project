@@ -36,10 +36,8 @@ export default  function AuthFormRegister(props) {
         AuthSignupService(registerData)
             .then((signupResponse) => {
                 setMessage(signupResponse.message);
-                console.log("signupResponse",signupResponse);
             }).catch(error => {
                 setMessage(error.message);
-                console.log("signupResponse",signupResponse);
             })
         
     }

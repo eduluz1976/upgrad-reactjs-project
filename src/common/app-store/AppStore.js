@@ -15,10 +15,6 @@ const initialState = {
 
 function AppStore(state = initialState, action) {
 
-    // console.log('appStore.state', state);
-    // console.log('appStore.action', action);
-
-
     switch (action.type) {
         case 'OPEN_AUTH_DIALOG':
             return {...state, isAuthDialogOpen: true};

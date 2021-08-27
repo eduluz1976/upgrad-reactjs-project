@@ -6,7 +6,6 @@ export default function IsUserLogged() {
 
     try {
         const userDataDecoded = JSON.parse(userData);
-        // console.log('userData',userData);
 
         if (userDataDecoded) {
             return true;

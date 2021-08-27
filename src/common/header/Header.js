@@ -10,7 +10,6 @@ export default function Header() {
 
     
     const onClickLoginButton = () => {
-        console.log('Opening the Input dialog');
         setIsAuthFormDialogOpen({isOpen: true});
     }
       

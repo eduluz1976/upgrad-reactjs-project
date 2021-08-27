@@ -27,7 +27,6 @@ export default function RateMovie(props) {
         precision={1}
         onChange={(event, newValue) => {
           setValue(newValue);
-          console.log('set new rating', newValue);
         }}
         onChangeActive={(event, newHover) => {
           setHover(newHover);

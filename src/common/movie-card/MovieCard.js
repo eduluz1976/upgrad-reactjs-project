@@ -6,14 +6,9 @@ import { useHistory, useRouteMatch } from 'react-router';
 export default function MovieCard(props) {
 
     const history = useHistory();
-    // const movieId = props.movieData;
 
-    // if (props.movieData && props.movieData.id) {        
-        const movieId = props.movieData.id;
-        const movie = props.movieData;
-    // } else {
-    //     console.log('MovieCard', props.movieData);
-    // }
+    const movieId = props.movieData.id;
+    const movie = props.movieData;
     
 
     function getSubtitle(props) {
@@ -31,19 +26,15 @@ export default function MovieCard(props) {
         if (props.width) {
             response.width = props.width ;
         }
-        // console.log('getCustomStyle', props, response);
         return response;
     }
 
 
     function goToMovieDetails(e) {
         e.preventDefault();
-        console.log('goToMovieDetails', movieId, JSON.stringify( props));
         sessionStorage.setItem('currentMovie',JSON.stringify(movie));
-        // if (movieId !== undefined && movieId>0) {
-            history.push('/movie/'+movieId);
-        //     return;
-        // } 
+
+        history.push('/movie/'+movieId);
         
     }
 

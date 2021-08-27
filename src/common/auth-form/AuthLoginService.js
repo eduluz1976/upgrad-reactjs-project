@@ -4,7 +4,6 @@ import config from "../../config";
 export default async function AuthLoginService(parms) {
 
      
-    console.log("AuthLoginService", parms, config);
 
     
     const authorization = "Basic "+ window.btoa(`${parms.email}:${parms.password}`);
@@ -23,7 +22,6 @@ export default async function AuthLoginService(parms) {
 
       const json = await rawResult.json();
 
-      console.log('after login',json);
 
       if (json['id'] && json['status'] && json['status'] == 'ACTIVE') {        
         

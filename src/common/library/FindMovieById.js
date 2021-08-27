@@ -25,7 +25,6 @@ export default function FindMovieById(id) {
         response = [{}]
     }
 
-    console.log(response);
 
     return response[0];
 }

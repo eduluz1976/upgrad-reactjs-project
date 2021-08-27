@@ -4,7 +4,6 @@ import config from "../../config";
 export default async function AuthLogoutService(parms) {
 
      
-    console.log("AuthLogoutService", parms, config);
     
     if (!parms.accessToken) {
       return false;

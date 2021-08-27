@@ -19,21 +19,5 @@ export default function LoadMoviesService(props) {
             dispatch({type:"LOAD_MOVIES", payload: response.movies});
         });  
 
-    
-
-    // fetch(props.baseUrl + "/artists?limit=1000", {
-    //     method: "GET",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //       "Cache-Control": "no-cache"
-    //     }
-    //   })
-    //     .then((response) => response.json())
-    //     .then((response) => {
-    //       console.log(response.artists);
-    //         dispatch({type:"LOAD_ARTISTS", payload: response.artists});
-    //     });  
-
-    
   
 }

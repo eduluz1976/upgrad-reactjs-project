@@ -61,7 +61,6 @@ export default function AuthStatusBar (props) {
     }
 
     function clickBookShowButtonHandler() {
-        console.log(route.params);
         let movieId = route.params.id;
 
         const isLogged = IsUserLogged();

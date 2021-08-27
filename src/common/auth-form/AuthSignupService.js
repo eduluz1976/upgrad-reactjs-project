@@ -4,7 +4,6 @@ import config from "../../config";
 export default async function AuthSignupService(parms) {
 
      
-    console.log("AuthSignupService", parms, config);
 
     
     const body = {        
@@ -28,8 +27,6 @@ export default async function AuthSignupService(parms) {
       const rawResult = await fetch(config.baseUrl + "signup", request);
 
       const json = await rawResult.json();
-
-      console.log('after signup',json);
 
       if (json['id'] && json['status'] && json['status'] == 'ACTIVE') {
         return {message: "Registration Successful. Please Login!", success: true};
