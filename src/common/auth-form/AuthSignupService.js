@@ -1,10 +1,6 @@
 import config from "../../config";
 
-
 export default async function AuthSignupService(parms) {
-
-     
-
     
     const body = {        
             "email_address": parms.email,

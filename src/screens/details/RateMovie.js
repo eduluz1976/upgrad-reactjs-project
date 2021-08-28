@@ -1,8 +1,5 @@
 import React from 'react';
 import Rating from '@material-ui/lab/Rating';
-import Box from '@material-ui/core/Box';
-// import {StarBorderIcon} from  '@material-ui/icons';
-import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import { Typography } from '@material-ui/core';
 import './Details.css'

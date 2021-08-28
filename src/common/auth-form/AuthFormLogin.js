@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Dialog from '@material-ui/core/Dialog';
-import TextField from '@material-ui/core/TextField';
-import DialogActions from '@material-ui/core/DialogActions';
 import Button from '@material-ui/core/Button';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 import AuthLoginService from './AuthLoginService';
@@ -14,7 +9,6 @@ import './AuthFormDialog.css';
 export default function AuthFormLogin(props) {
 
     const [hasError, setHasError] = useState({err: false, message:''});
-    // const [isModalOpen, setIsModalOpen] = useState(true);
 
     const [loginData, setLoginData] = React.useState({
         email: '',
@@ -89,9 +83,6 @@ export default function AuthFormLogin(props) {
                         type="password"
                         value={password}
                     ></TextValidator>
-
-
-
 
                     <br />
 

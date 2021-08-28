@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react';
-import { useSelector } from 'react-redux';
 import FindMovieById from '../../common/library/FindMovieById';
 import Header from '../../common/header/Header.js';
-import { Link, Typography } from '@material-ui/core';
 import './Details.css'
 import Left from './Left';
 import Middle from './Middle';
@@ -29,27 +27,17 @@ export default function Details (props) {
     } else {
         return (
 
-            <Fragment>
+            <Fragment>            
+                <Header/>          
+
+                <div className="details-container">
             
-            <Header/>
+                    <Left movie={movie}/>
+                    <Middle movie={movie}/>
+                    <Right movie={movie}/>
 
-          
-
-            <div className="details-container">
+                </div>
         
-                <Left movie={movie}/>
-                <Middle movie={movie}/>
-                <Right movie={movie}/>
-                
-                
-
-               
-
-
-            </div>
-    
-    
-    
             </Fragment>
     
         );

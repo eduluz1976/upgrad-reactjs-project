@@ -1,4 +1,4 @@
-import {  GridList, GridListTile, GridListTileBar, ImageList } from '@material-ui/core';
+import { ImageList } from '@material-ui/core';
 import React from 'react';
 import MovieCard from '../../common/movie-card/MovieCard';
 import './GridMovies.css'
@@ -30,7 +30,6 @@ export default function GridMovies(props) {
                  />
             );
         })}
-
 
         </ImageList>
 

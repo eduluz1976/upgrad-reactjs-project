@@ -2,9 +2,6 @@ import config from "../../config";
 
 
 export default async function AuthLoginService(parms) {
-
-     
-
     
     const authorization = "Basic "+ window.btoa(`${parms.email}:${parms.password}`);
 
@@ -28,7 +25,6 @@ export default async function AuthLoginService(parms) {
         return {userData: json, success: true, accessToken: rawResult.headers.get('access-token')};
       } else {
         throw new Error(json.message);
-        //return {message: json.message, success: false};
       }
 
 

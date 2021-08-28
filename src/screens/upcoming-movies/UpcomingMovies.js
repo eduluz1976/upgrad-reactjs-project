@@ -1,7 +1,7 @@
-import { Grid, GridList, GridListTile, GridListTileBar, ImageList, ImageListItemBar } from '@material-ui/core';
+import {  ImageList } from '@material-ui/core';
 import React from 'react';
 import './UpcomingMovies.css';
-import { useSelector, useStore } from 'react-redux';
+import { useSelector } from 'react-redux';
 import MovieCard from '../../common/movie-card/MovieCard';
 
 export default function UpcomingMovies() {

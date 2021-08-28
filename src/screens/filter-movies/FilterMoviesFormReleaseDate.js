@@ -8,7 +8,7 @@ export default function FilterMoviesFormReleaseDate (props) {
     const setReleaseDate = props.setReleaseDate;
 
     return (        
-        <FormControl style={{width:'100%'}}>                      
+        <FormControl className='filter-movies-item'>
         
         <TextField
         label={props.label}

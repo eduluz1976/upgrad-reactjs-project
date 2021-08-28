@@ -9,8 +9,7 @@ const initialState = {
       
     ],
     upcomingMovies: [
-    ],
-    artists: []
+    ]
 };
 
 function AppStore(state = initialState, action) {

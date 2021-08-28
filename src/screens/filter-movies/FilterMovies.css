@@ -1,6 +1,13 @@
 
 
 .filter-movies-card-container {
-    min-width: 240px;
-    max-width: 240px;
+    width: 100%;
+}
+
+.filter-movies-item {    
+    width: 100%;
+}
+
+.button-filter-movies {
+    width: 100%;
 }

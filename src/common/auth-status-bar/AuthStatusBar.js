@@ -1,6 +1,6 @@
 import { Button } from '@material-ui/core';
 import React from 'react';
-import { useSelector, useStore, useDispatch } from 'react-redux';
+import { useStore, useDispatch } from 'react-redux';
 import { useHistory, useRouteMatch } from 'react-router';
 import AuthLogoutService from '../auth-form/AuthLogoutService';
 import IsUserLogged from '../library/IsUserLogged';

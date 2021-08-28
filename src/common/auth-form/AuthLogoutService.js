@@ -3,8 +3,6 @@ import config from "../../config";
 
 export default async function AuthLogoutService(parms) {
 
-     
-    
     if (!parms.accessToken) {
       return false;
     }

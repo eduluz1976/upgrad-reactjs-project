@@ -1,5 +1,5 @@
-import { Checkbox, FormControl, Input, InputLabel, MenuItem, Select } from '@material-ui/core';
-import React, { useEffect, useState, Fragment } from 'react';
+import { Checkbox, FormControl,  InputLabel, MenuItem, Select } from '@material-ui/core';
+import React from 'react';
 
 
 
@@ -33,7 +33,7 @@ export default function FilterMoviesFormArtists (props) {
     }
 
     return (
-        <FormControl style={{width:'100%'}}>                
+        <FormControl className='filter-movies-item'>
         <InputLabel>Artists
         </InputLabel>
             <Select value={selectedArtists} >

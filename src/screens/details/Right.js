@@ -1,4 +1,3 @@
-import { GridList } from '@material-ui/core';
 import React from 'react';
 import Artists from './Artists';
 import RateMovie from './RateMovie';

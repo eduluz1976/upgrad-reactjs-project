@@ -1,6 +1,5 @@
 import { Link, Typography } from '@material-ui/core';
 import React from 'react';
-import MovieCard from '../../common/movie-card/MovieCard';
 import YouTube from 'react-youtube';
 
 export default function Middle(props) {
@@ -41,15 +40,9 @@ export default function Middle(props) {
         <Typography className="sub-title">
         Trailer: <br/>
         </Typography>
-        
-
-
-        <YouTube videoId={getTrailerId()} style={{marginTop:16}} />
   
-        
-
-
-
+        <YouTube videoId={getTrailerId()} className='video-trailer'  />
+  
         </div>
     );
 }
