@@ -1,0 +1,9 @@
+.movie-card-container {
+    width: 25%; 
+    height: 354px; 
+    padding: 2px;
+}
+
+.movie-card-container :hover {
+    cursor: pointer;
+}

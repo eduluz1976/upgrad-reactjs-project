@@ -1,0 +1,14 @@
+.header-home {
+    background-color: black;
+    color: #222;
+    height: 36px;
+    vertical-align: middle;
+    /* padding: 8px 8px 32px 16px; */
+    padding: 8px 32px 8px 16px;
+}
+
+.header-logo {
+    height: 35px;
+    background-color: #ff7f7f;
+    
+}

@@ -1,0 +1,35 @@
+.upcoming-movies-heading{
+    background-color: #ff9999;
+    padding: 8px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.upcoming-movies-list {
+    display: flex;    
+    flex-direction: row;
+    flex-wrap: nowrap !important;
+}
+
+
+
+.upcoming-movie-item{
+    height: 250px;
+    width: 200px;
+}
+
+
+.MuiGridList-root li {
+    height: 245px;
+}
+
+.upcoming-movies-container {
+    
+    height: 265px;
+    background-color: #ff9999;
+    display: flex;    
+    overflow: hidden;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
